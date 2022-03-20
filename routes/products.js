@@ -40,7 +40,7 @@ router.delete("/:id", (req, res, next) => {
   const id = req.params['id']
   // const id = req.body._id;
   console.log("id delete", id)
-  console.debug('Product ID to delete',id);
+  console.debug('Product ID to delete', id);
   Product.findByIdAndDelete(id, (err, doc) => {
     if (err) {
       console.error("Hey look, Error!", err);
