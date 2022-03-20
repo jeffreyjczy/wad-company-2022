@@ -35,36 +35,19 @@ router.post("/", (req, res, next) => {
     });
 });
 
-// router.delete("/:id", (req, res, next) => {
-//     const id = req.params['id']
-//     // const id = req.body._id;
-//     console.log("id delete", id)
-//     console.debug('Product ID to delete', id);
-//     Product.findByIdAndDelete(id, (err, doc) => {
-//         if (err) {
-//             console.error("Hey look, Error!", err);
-//             res.json(err);
-//         } else {
-//             res.status(200).json(doc);
-//         }
-//     });
-// });
+router.delete("/:id", (req, res, next) => {
+    const id = req.params['id']
+    console.log("id delete", id)
+    console.debug('Quotation ID to delete', id);
+    Quotation.findByIdAndDelete(id, (err, doc) => {
+        if (err) {
+            console.error("Hey look, Error!", err);
+            res.json(err);
+        } else {
+            res.status(200).json(doc);
+        }
+    });
+});
 
-// router.put("/", async (req, res, next) => {
-//     console.debug(req.body);
-//     const data = req.body;
-//     const id = data._id;
-//     delete data._id;
-//     console.debug(data);
 
-//     Product.findByIdAndUpdate(id, data, (err, doc) => {
-//         if (err) {
-//             console.error("Hey look, Error!", err);
-//             res.json(err);
-//         } else {
-//             res.status(200).json(doc);
-//         }
-//     });
-
-// });
 module.exports = router;
