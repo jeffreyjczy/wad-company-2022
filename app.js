@@ -12,10 +12,9 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
 var customerRouter = require('./routes/customers');
-var quotationRouter = require('./routes/quotations');
+// var quotationRouter = require('./routes/quotations');
 
 var app = express();
-
 app.use(cors());
 
 // view engine setup
@@ -38,7 +37,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/customers',customerRouter);
-app.use('/quotations',quotationRouter);
+// app.use('/quotations',quotationRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
