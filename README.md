@@ -1,100 +1,53 @@
  # Jeffrey's Final Exam for WAD
-An api for lend or borrow item in the university dorm. this is final project for web application. the api write by using express.js connect with mongoDB.
+This company application is part of the final exam of Web Application Development course. The application simulates a business company which has the functionality to add, edit, delete products from the database. The purpose of this project is to understand the basic concepts of building a web application. In this course, we are using MERN stack to build the website.
 
-# Contributors (Team)
-- Krittamet Chuwongworaphinit 6111252
-- Thitare Nimanong 6210015
+- MongoDB: A document-oriented database used to store the application data.
+
+- ExpressJS: A framework layered on top of NodeJS, used to build the backend of a site using NodeJS functions and structures.
+
+- NodeJS: The JavaScript runtime environment. It is used to run JavaScript on a machine rather than in a browser.
+
+- ReactJS: A library used to build UI components that create the user interface of the web application.
+
+# Author
 - Jeffrey Zhi Yee Chong 6310023
 
-# How To Get Start
+# Features
+There are 4 pages in as follow:
+- Login - simulates the login page with username and password checking in the database.
+- Quotation Management - A page that retrieves all quotation data from the database and display in table sorted by date of creation. This page shows the quantity, item, price/unit and the total amount of the products as record. In this page, users are able to delete any record from the database.
+- Quotation-add - A page which allows users to add quotation into a cart before submitting to the database. In this page, users can select the product from a list (retrieve from product database), price, quantity. Once finish, user can save all items in the cart to the quotation database.
 
+
+# Api list
+## Products API
+
+`GET /products` - retrieve all products from the database.
+
+`POST /products` - insert a product into the database. A product consists of code, name, and price.
+
+`PUT /products` - update the product details (code, name, price).
+
+`DELETE /products/:id` - delete a product from the database using product_ID.
+
+## Quotation API
+
+`GET /quotations` - retrieve all quotations from the database.
+
+`POST /quotations` - insert a quotation into the database. A quotation consists of product, price, and quantity.
+
+`DELETE /quotations/:id` - delete a quotation from the database using quotation_ID.
+
+# Deployment
+The application is deployed using hiroku service: https://company-6310023.herokuapp.com/
+
+# How To Get Start
 ## Install
 Clone the project and run `npm install` or run `yarn` to install dependencies.
 
 ## Run the App
-    npm start (for npm)
+    npm dev (for npm)
+    yarn dev (for yarn)
 
-    yarn start (for yarn)
-
-
-# Features
-The features according to the following:
-- Users can lend item by spcifying price and duration. Items can be add/edit/delete by the lender.
-- Borrowing items - Users can choose from the search page and add wanted items into borrowing list, confirmation request will be sent back to the lenders before processing (pending state).
-- Returning items - a confirmation request will notify both lenders and borrower before returning item.
-- Users can keep track of lending/borrowing history.
-
-
-# Api list
-## Item API
-
-`GET /items` 
-
-`POST /items`
-
-`GET /items/:id`
-
-`GET /items/?userId={studentID}`
-
-`PUT /items/:id`
-
-`DELETE /items/:id`
-
-## Users API
-
-`GET /users`
-
-`GET /users/:studentID`
-
-`PUT /users/:studentID`
- 
-## Borrow API
-`POST /borrows/create-borrow`
-
-`PATCH /borrows/lender/accept`
- 
-`GET /borrows/:id` 
-
-`GET /borrows/lender?userId={userid}`
-
-`GET /borrows/borrower?userId={userid}`
-
-`DELETE /borrows/:id`
-
-## Transaction
-`GET /transactions` 
-
-`GET /transactions/:id`
-
-`GET /transactions/detail/:id`
-
-`POST /transactions`
-
-`PATCH /transactions/:id`
- 
-
-## Auth
-`POST /auth/register`
-
-`POST /auth/login`
- 
-
----
-for more API's information https://lent-it-api.herokuapp.com/api-docs/
-
-
-
-
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+## Frontend Github repository
 
