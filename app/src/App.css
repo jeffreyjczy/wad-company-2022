@@ -1,0 +1,54 @@
+.box {
+  border: solid 1px rgb(136, 206, 185);
+  min-Height: 70vh;
+  margin:auto;
+  margin-top: 3%;
+  border-radius: 10px;
+  background-color: rgb(233, 248, 244);
+  box-Shadow: 0px 0px 10px -6px #000000;
+  padding: 20px;
+}
+
+.box1 {
+  border: solid 1px rgb(136, 206, 185);
+  min-Height: 50vh;
+  margin:auto;
+  margin-top: 3%;
+  border-radius: 10px;
+  background-color: rgb(233, 248, 244);
+  box-Shadow: 0px 0px 10px -6px #000000;
+  padding: 20px;
+}
+.box2 {
+  border: solid 1px rgb(136, 206, 185);
+  min-Height: 40vh;
+  max-width: 70%;
+  margin:auto;
+  margin-top: 15%;
+  border-radius: 10px;
+  background-color: rgb(233, 248, 244);
+  box-Shadow: 0px 0px 10px -6px #000000;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-left:2%;
+}
+
+.btn-add {
+  margin-top: auto;
+  height: 40px;
+  width: 120px;
+  justify-content: center;
+  margin-right: 4%;
+}
+
+Form > Row{
+  height: 60px;
+}
+
+
+
