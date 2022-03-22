@@ -50,4 +50,4 @@ Clone the project and run `npm install` or run `yarn` to install dependencies.
     yarn dev (for yarn)
 
 ## Frontend Github repository
-
+https://github.com/jeffreyjczy/wad-company-2022/tree/main/app
